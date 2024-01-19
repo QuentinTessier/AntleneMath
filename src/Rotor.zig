@@ -1,12 +1,12 @@
 const std = @import("std");
 
-const Mat4x4 = @import("root.zig").Mat4x4;
+const Mat4x4 = @import("main.zig").Mat4x4;
 
-const Vec3 = @import("root.zig").Vec3;
-const vec3 = @import("root.zig").vec3;
+const Vec3 = @import("main.zig").Vec3;
+const vec3 = @import("main.zig").vec3;
 
-const Vec4 = @import("root.zig").Vec4;
-const vec4 = @import("root.zig").vec4;
+const Vec4 = @import("main.zig").Vec4;
+const vec4 = @import("main.zig").vec4;
 
 const BiVec3 = Vec3;
 
