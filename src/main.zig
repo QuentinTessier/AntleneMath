@@ -12,8 +12,11 @@ pub const MatrixGenerator = @import("Mat.zig").MatrixGenerator;
 // But since Vec3 is taken for functions definition, we have to replace it with vec3 like for matrices. I feel like this make it hard to tell which is a type and which is the "namespace"
 // An other solution could be Vec3.Type, I don't know how I feel about this one yet.
 pub const Vec2 = VectorGenerator(2, f32);
+pub const vec2 = Vec2.Type;
 pub const Vec3 = VectorGenerator(3, f32);
+pub const vec3 = Vec2.Type;
 pub const Vec4 = VectorGenerator(4, f32);
+pub const vec4 = Vec2.Type;
 
 // Same things with Vectors but here since the type is [C]@Vector(R, Type), I provide the type has matCxR for simplicity, but I don't like it :')
 pub const Mat2x2 = MatrixGenerator(2, 2, f32);
@@ -24,20 +27,32 @@ pub const Mat4x4 = MatrixGenerator(4, 4, f32);
 pub const mat4x4 = Mat4x4.MatrixType;
 
 pub const Vec2h = VectorGenerator(2, f16);
+pub const vec2h = Vec2h.Type;
 pub const Vec3h = VectorGenerator(3, f16);
+pub const vec3h = Vec2h.Type;
 pub const Vec4h = VectorGenerator(4, f16);
+pub const vec4h = Vec2h.Type;
 pub const Mat2x2h = MatrixGenerator(2, 2, f16);
+pub const mat2x2h = Mat2x2.MatrixType;
 pub const Mat3x3h = MatrixGenerator(3, 3, f16);
+pub const mat3x3h = Mat2x2.MatrixType;
 pub const Mat4x4h = MatrixGenerator(4, 4, f16);
+pub const mat4x4h = Mat2x2.MatrixType;
 
 pub const Vec2d = VectorGenerator(2, f64);
+pub const vec2d = Vec2h.Type;
 pub const Vec3d = VectorGenerator(3, f64);
+pub const vec3d = Vec2h.Type;
 pub const Vec4d = VectorGenerator(4, f64);
+pub const vec4d = Vec2h.Type;
 pub const Mat2x2d = MatrixGenerator(2, 2, f64);
+pub const mat2x2d = Mat2x2.MatrixType;
 pub const Mat3x3d = MatrixGenerator(3, 3, f64);
+pub const mat3x3d = Mat2x2.MatrixType;
 pub const Mat4x4d = MatrixGenerator(4, 4, f64);
+pub const mat4x4d = Mat2x2.MatrixType;
 
-// Experimental: Test and verify usage
+// Experimental: Test and verify usage http://www.weylmann.com/geometric_algebra_vince.pdf
 pub const Rotor = @import("Rotor.zig").Rotor;
 
 // Constants
